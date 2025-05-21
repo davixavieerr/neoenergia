@@ -1,0 +1,153 @@
+/* Estilos adicionais para melhorar a responsividade mobile */
+.monitoring__wrapper {
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, #e6f2ff 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+    margin-top: var(--space-lg);
+}
+
+.monitoring__subtitle {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-md);
+}
+
+.monitoring__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-right: var(--space-sm);
+    color: var(--color-secondary);
+}
+
+.feature-text h4 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.app-buttons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.app-icon {
+    margin-right: var(--space-xs);
+}
+
+.app-frame {
+    border: 10px solid #333;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+.app-shadow {
+    position: absolute;
+    bottom: -20px;
+    left: 10%;
+    right: 10%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* Melhorias de responsividade para mobile */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .monitoring__content {
+        flex-direction: column-reverse;
+        gap: var(--space-lg);
+    }
+    
+    .monitoring__image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .app-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .feature-item {
+        padding: var(--space-xs);
+    }
+    
+    .feature-icon {
+        font-size: 1.5rem;
+    }
+    
+    .product__image {
+        height: 180px;
+    }
+    
+    .section__title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .monitoring__features {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: 80vh;
+    }
+    
+    .hero__title {
+        font-size: 1.7rem;
+    }
+    
+    .monitoring__subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .nav__logo span {
+        font-size: 1.2rem;
+    }
+}
